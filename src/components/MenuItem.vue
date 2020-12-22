@@ -9,7 +9,7 @@ export default {
     <div class="menu-item">
         <img class="menu-item__image" :src="image.source" :alt="image.alt" />
         <div>
-            <h3>{{ name }}</h3>
+            <a :href="/item/+name"><h3>{{ name }}</h3></a>
             <p v-if="inStock">En stock</p>
             <p v-else>En rupture de stock</p>
             <div>
