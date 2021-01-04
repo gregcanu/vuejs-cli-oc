@@ -15,6 +15,7 @@
                 :addToShoppingCart="addToShoppingCart"
                 :name="item.name"
                 :image="item.image"
+                :price="item.price"
                 :quantity="item.quantity"
                 :inStock="item.inStock"
                 :key="item.name"
@@ -50,7 +51,8 @@ export default {
                         alt: "Un croissant"
                     },
                     inStock: true,
-                    quantity: 1
+                    quantity: 1,
+                    price: 2
                 },
                 {
                     name: "Baguette de pain",
@@ -59,7 +61,8 @@ export default {
                         alt: "Quatre baguettes de pain"
                     },
                     inStock: true,
-                    quantity: 1
+                    quantity: 1,
+                    price: 2.50
                 },
                 {
                     name: "Éclair",
@@ -68,7 +71,8 @@ export default {
                         alt: "Éclair au chocolat"
                     },
                     inStock: false,
-                    quantity: 1
+                    quantity: 1,
+                    price: 4
                 }
             ]
         }
