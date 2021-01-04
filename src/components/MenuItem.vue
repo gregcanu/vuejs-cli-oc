@@ -1,8 +1,34 @@
 <script>
 export default {
     name: "MenuItem",
-    props: ["addToShoppingCart", "image", "inStock", "name", "quantity", "price"],
-    date: new Date(),
+    // props: ["addToShoppingCart", "image", "inStock", "name", "quantity", "price"],
+    props: {
+        addToShoppingCart: {
+            type: Function,
+            required: true
+        },
+        image: {
+            type: Object,
+            required: true
+        },
+        inStock: {
+            type: Boolean,
+            required: true
+        },
+        name: {
+            type: String,
+            required: true
+        },
+        quantity: {
+            type: Number,
+            default: 1
+        },
+        price: {
+           type: Number,
+            required: true
+        }
+
+    },
     data() {
         return {
             onSale: false
@@ -17,7 +43,6 @@ export default {
         }
     },
     beforeMount() {
-        // const today = this.date.getDate();
         const today = new Date().getDate()
         if(today % 2 === 0) {
             this.onSale = true
